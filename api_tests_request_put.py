@@ -12,7 +12,6 @@ headers = { "x-api-key": "reqres-free-v1" } #уже знаем, что без х
 def test_update_user():
     response = requests.put(base_url + endpoint_update, data=body_update, headers=headers)
     assert response.status_code == 200
-    assert response.status_code == 200
     assert response.json()["job"] == "zion resident"
     assert response.json()["name"] == "Tom"
     response_body = response.json()
